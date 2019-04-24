@@ -1,0 +1,20 @@
+<div class="container">
+    <form class="form-horizontal" role="form">
+        <h2>Registration</h2>
+        <form class="needs-validation" novalidate>
+            <div class="form-group">
+                <label for="uname">Username:</label>
+                <input type="text" class="form-control" id="uname" placeholder="Enter username" (NgModel)="redentials.username" name="uname" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" (NgModel)="redentials.password" name="pswd" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <button (click)="test()" type="submit" class="btn btn-primary btn-block" [disabled]="!isValid">Submit</button>
+        </form>
+    </form> <!-- /form -->
+</div> <!-- ./container -->
